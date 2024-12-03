@@ -2,7 +2,7 @@
 // Configuración de la conexión a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "fisc24*"; // Asegúrate de que esta contraseña sea correcta
+$password = "tu_contrasena"; // Asegúrate de que esta contraseña sea correcta
 $dbname = "nbasegura";
 
 
