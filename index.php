@@ -1,0 +1,1 @@
+<p><a href="7.productos.php">El inicio de todo.</a></p>
