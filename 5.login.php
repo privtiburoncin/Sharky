@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($usuario) {
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nombre'] = $usuario['nombre']; // Asegúrate de que se asigne el nombre aquí
-            header("Location: 7.productos.php");
+            header("Location: index.php");
             exit();
         } else {
             echo "<script>alert('Correo o contraseña incorrectos.');</script>";

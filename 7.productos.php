@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['producto_id'], $_POST
         $stmt->execute([$_SESSION['usuario_id'], $producto_id, $cantidad, $cantidad]);
 
         echo "<script>alert('Producto añadido al carrito');</script>";
-        echo "<script>window.location.href = '7.productos.php';</script>";
+        echo "<script>window.location.href = 'index.php';</script>";
         exit();
     } catch (PDOException $e) {
         die("Error al añadir producto al carrito: " . $e->getMessage());
@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['producto_id'], $_POST
     </div>
     <nav>
         <ul>
-            <li><a href="7.productos.php">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
             <li><a href="1.carrito.php">Carrito</a></li>
             <?php if (isset($_SESSION['usuario_id'])): ?>
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['producto_id'], $_POST
     <main>
         <section id="productos">
             <h1>Productos NBA</h1>
-            <form method="GET" action="7.productos.php" class="filtros">
+            <form method="GET" action="index.php" class="filtros">
                 <select name="categoria">
                     <option value="">Todas las Categorías</option>
                     <?php foreach ($categorias as $categoria): ?>
@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['producto_id'], $_POST
                             <p><?php echo htmlspecialchars($producto['descripcion']); ?></p>
                             <p>Precio: $<?php echo htmlspecialchars($producto['precio']); ?></p>
                             <?php if (isset($_SESSION['usuario_id'])): ?>
-                                <form method="POST" action="7.productos.php">
+                                <form method="POST" action="index.php">
                                     <input type="hidden" name="producto_id" value="<?php echo $producto['id']; ?>">
                                     <label for="cantidad_<?php echo $producto['id']; ?>">Cantidad:</label>
                                     <input type="number" id="cantidad_<?php echo $producto['id']; ?>" name="cantidad" value="1" min="1">
