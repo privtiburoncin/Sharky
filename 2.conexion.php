@@ -2,8 +2,9 @@
 // Configuración de la conexión a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "fisc24*"; // Actualiza con la contraseña configurada
+$password = "fisc24*"; // Asegúrate de que esta contraseña sea correcta
 $dbname = "nbasegura";
+
 
 // Crear la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
